@@ -1,6 +1,6 @@
 import requests
 
-from bs4 import BeautifulSouppyen
+from bs4 import BeautifulSoup
 
 BASE_URL = 'https://www.rescale.com/'
 class Crawler(object):
@@ -16,12 +16,12 @@ class Crawler(object):
 
         resp.raise_for_status
 
-        text = resp.text
+        html_content = BeautifulSoup(resp.content, "html.parser")
 
-        print(text)
+        print(html_content.prettify)
 
 
 if __name__ == "__main__":
-    print('Initial testing')
+    print('Initial testing...')
 
     crawler = Crawler()

@@ -1,5 +1,6 @@
 import requests
 
+from bs4 import BeautifulSouppyen
 
 BASE_URL = 'https://www.rescale.com/'
 class Crawler(object):

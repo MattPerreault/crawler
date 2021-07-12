@@ -3,8 +3,6 @@ import requests
 
 from bs4 import BeautifulSoup
 
-BASE_URL = 'https://www.rescale.com'
-
 # Set of links, use a set to deal with duplicate links.
 links = set()
 
@@ -94,6 +92,11 @@ def crawler(url:str, max_depth=5):
 
 
 def get_cmd_line_args():
+    """Function for setting up argument parser.
+
+    Returns:
+        ArgumentParser: Object to hold command line arguments.
+    """
     parser = argparse.ArgumentParser()
     parser.add_argument('--url',
                         dest='url',

@@ -58,7 +58,7 @@ def is_active(url:str) -> bool:
     resp = requests.get(url)
 
     return True if resp.status_code == 200 else False
-    
+
 def get_content(url:str) -> BeautifulSoup:
     """Attempts to make get request to url, raises HTTPError if it fails.
     Returns the contents of the page.
